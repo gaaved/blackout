@@ -1,2 +1,2 @@
 <?php
-echo 'blackout';
+echo 'blackout2';
