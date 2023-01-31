@@ -1,0 +1,16 @@
+{
+    "name": "gaave/blackout",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Blackout\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kolia",
+            "email": "gaaved@gmail.com"
+        }
+    ],
+    "require": {}
+}
