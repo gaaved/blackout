@@ -7,4 +7,9 @@ class DefaultController
         return 'homepage';
     }
 
+    public function about()
+    {
+        return 'about';
+    }
+
 }

@@ -5,10 +5,14 @@ namespace Blackout;
 class Route
 {
 
-    private array $routes = [];
+    private static array $routes = [];
 
-    public static function get()
+    public static function get($path, ...$args)
     {
 
+        self::$routes[$path] = [
+            'path' => $path,
+            'args' => $args,
+        ];
     }
 }
