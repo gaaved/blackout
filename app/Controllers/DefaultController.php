@@ -4,7 +4,7 @@ class DefaultController
 {
     public function homepage()
     {
-        return 'homepage';
+        return 'homepage2';
     }
 
     public function about()
