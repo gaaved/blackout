@@ -2,17 +2,26 @@
 
 namespace Blackout;
 
+use Blackout\Traits\Singleton;
+
 class Route
 {
 
-    private static array $routes = [];
+    use Singleton;
+
+    private array $routes = [];
 
     public static function get($path, ...$args)
     {
 
-        self::$routes[$path] = [
+        self::object()->routes[$path] = [
             'path' => $path,
             'args' => $args,
         ];
+    }
+
+    public static function getList()
+    {
+        return self::object()->routes;
     }
 }
