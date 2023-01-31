@@ -1,20 +1,21 @@
 <?php
 
-
 namespace Blackout;
-
 
 class Kernel
 {
-
     public function boot()
     {
         $routes = Route::getList();
-        if (array_key_exists($_SERVER['REQUEST_URI'], $routes)){
+        $uri = $_SERVER['REQUEST_URI'];
 
-            echo ('Route found');
+        if (array_key_exists($uri, $routes)) {
+            $controller = new $routes[$uri]['args'][0];
+
+            return call_user_func([$controller, $routes[$uri]['args'][1]]);
         } else {
             http_response_code(404);
+
             echo ('404 Not Found');
         }
     }

@@ -2,7 +2,10 @@
 
 use Blackout\Route;
 use App\Controllers\DefaultController;
+use \App\Controllers\UserController;
 
-Route::get('/blackout/public/', [DefaultController::class, 'about']);
-Route::get('/blackout/public/about', [DefaultController::class, 'about']);
-Route::get('/blackout/public/contacts', [DefaultController::class, 'about']);
+Route::get('/', [DefaultController::class, 'homepage']);
+Route::get('/about', [DefaultController::class, 'about']);
+Route::get('/contacts', [DefaultController::class, 'contacts']);
+
+Route::get('/users/create', [UserController::class, 'create']);

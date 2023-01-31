@@ -11,7 +11,7 @@ class Route
 
     private array $routes = [];
 
-    public static function get($path, ...$args)
+    public static function get($path, array $args)
     {
 
         self::object()->routes[$path] = [

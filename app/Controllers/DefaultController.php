@@ -4,12 +4,17 @@ class DefaultController
 {
     public function homepage()
     {
-        return 'homepage2';
+        echo 'homepage2';
     }
 
     public function about()
     {
-        return 'about';
+        echo 'about';
+    }
+
+    public function contacts()
+    {
+        echo 'contacts';
     }
 
 }
