@@ -1,4 +1,7 @@
 <?php
 require_once '../vendor/autoload.php';
 
-echo 'blackout233';
+use App\Controllers\DefaultController;
+
+$defaultController = new DefaultController();
+echo $defaultController->homepage();
