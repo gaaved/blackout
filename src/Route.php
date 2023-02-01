@@ -17,6 +17,17 @@ class Route
         self::object()->routes[$path] = [
             'path' => $path,
             'args' => $args,
+            'type' => 'GET',
+        ];
+    }
+
+    public static function post($path, array $args)
+    {
+
+        self::object()->routes[$path] = [
+            'path' => $path,
+            'args' => $args,
+            'type' => 'POST',
         ];
     }
 
