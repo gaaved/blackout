@@ -4,7 +4,7 @@ class DefaultController
 {
     public function homepage()
     {
-        echo 'homepage2';
+       include('../resources/views/form.html');
     }
 
     public function about()

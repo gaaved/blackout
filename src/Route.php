@@ -17,7 +17,7 @@ class Route
         self::object()->routes[$path] = [
             'path' => $path,
             'args' => $args,
-            'type' => 'GET',
+            'method' => 'GET',
         ];
     }
 
@@ -27,7 +27,7 @@ class Route
         self::object()->routes[$path] = [
             'path' => $path,
             'args' => $args,
-            'type' => 'POST',
+            'method' => 'POST',
         ];
     }
 
