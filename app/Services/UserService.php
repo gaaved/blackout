@@ -8,8 +8,8 @@ class UserService
 {
     public function create(UserCreateData $data)
     {
-        echo 'User created:  ' . $data->nickname;
-        echo '<br>' . 'Email is sent to:  ' . $data->email;
+        echo 'Email:  ' . $data->email;
+        echo '<br>' . 'Password:  ' . $data->password;
         return true;
     }
 }

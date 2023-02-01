@@ -16,10 +16,10 @@ class UserController
     public function create()
     {
         $data = new UserCreateData([
-            'email' => 'gmail@gmail.com',
-            'nickname' => 'usernickname',
-            'password' => '123456',
+            'email' => $_POST['email'],
+            'password' => $_POST['password'],
         ]);
+
         return $this->userService->create($data);
     }
 }
