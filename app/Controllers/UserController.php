@@ -13,12 +13,15 @@ class UserController
     {
         $this->userService = new UserService();
     }
+
     public function create()
     {
-        $data = new UserCreateData([
-            'email' => $_POST['email'],
-            'password' => $_POST['password'],
-        ]);
+        $data = new UserCreateData(
+            [
+                'email' => $_POST['email'],
+                'password' => $_POST['password'],
+            ]
+        );
 
         return $this->userService->create($data);
     }

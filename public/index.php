@@ -4,4 +4,3 @@ require_once '../app/routes/web.php';
 
 $kernel = new \Blackout\Kernel();
 $kernel->boot();
-

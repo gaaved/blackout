@@ -1,5 +1,6 @@
 <?php
 namespace App\Controllers;
+
 class DefaultController
 {
     public function homepage()
@@ -16,5 +17,4 @@ class DefaultController
     {
         echo 'contacts';
     }
-
 }
